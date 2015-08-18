@@ -29,3 +29,7 @@ function getDistance() {
     // if value is in that array, result = distance from this array to Union, then from Union to destination in that array. 
   }
 }
+
+// function getLine() {
+//   var line = map.forEach
+// }

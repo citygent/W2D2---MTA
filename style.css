@@ -1,3 +1,6 @@
 body {
   background-image: url(mta_map.gif);
+  background-size: auto;
+  background-position: center;
 }
+
