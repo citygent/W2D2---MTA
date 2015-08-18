@@ -19,9 +19,17 @@ var map = {
 var submitButton = document.getElementById('submit');
 submitButton.addEventListener('click', getRoute);
 
-var from = document.getElementById('from').value;
+var from = document.getElementById('from');
+var to = document.getElementById('to');
 
-function getRoute(){
+function getRoute() {
   event.preventDefault();
+  a = map.N.indexOf(from.value);
+  b = map.N.indexOf(to.value);
   console.log('CLICKED');
+  console.log(a);
+  console.log(b);
+  result = Math.abs(a - b);
+  console.log(result);
+  // when this is working absolute/floor the sum of indexa-indexb
 }
