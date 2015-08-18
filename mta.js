@@ -6,30 +6,26 @@ var map = {
   '6' : ['Grand Central', '33rd', '28th', '23rd', 'Union Square', 'Astor Place'],
 };
 
-//return number of stops between start and destination on given line. 
-
-// function stops(line, from, to) {
-//   var line = map.N;
-//   // b = map.line.indexOf(to);
-//   console.log(line);
-//   // console.log(b);
-// };
-// stops('N', '34th', '28th');
-
 var submitButton = document.getElementById('submit');
-submitButton.addEventListener('click', getRoute);
+submitButton.addEventListener('click', getDistance);
 
 var from = document.getElementById('from');
 var to = document.getElementById('to');
 
-function getRoute() {
+function getDistance() {
   event.preventDefault();
   a = map.N.indexOf(from.value);
   b = map.N.indexOf(to.value);
   console.log('CLICKED');
   console.log(a);
   console.log(b);
-  result = Math.abs(a - b);
-  console.log(result);
-  // when this is working absolute/floor the sum of indexa-indexb
+  if (a > -1 && b > -1) {
+    result = Math.abs(a - b);
+    console.log('GetDistResult:'+result);
+    return result;
+  } else {
+    console.log("The princess youre looking for is in another castle.");
+    // search other arrays for values. 
+    // if value is in that array, result = distance from this array to Union, then from Union to destination in that array. 
+  }
 }
