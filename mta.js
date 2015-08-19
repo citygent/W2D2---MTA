@@ -30,6 +30,10 @@ function getDistance() {
   }
 }
 
-// function getLine() {
-//   var line = map.forEach
-// }
+function getLine(){ 
+  for (line in map) {
+    console.log("line:"+line); // prints line for each array.
+    console.log("Stations:"+map[line]); // prints the array for each line.
+    }
+  }
+getLine();
